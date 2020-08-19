@@ -114,8 +114,13 @@
                 <?php 
                 foreach($eventos_dias as $dia => $eventos){                
                 ?>
-                <div id="<?php echo str_replace('á','a',$dia);?>" class="contenido-dia clearfix">
-                    <h4><?php echo $dia ?></h4>
+                <?php
+                setlocale( LC_ALL, 'spanish' );
+                $dia_semana = strftime('%A', strtotime($dia));
+                $dia_semana = ucfirst( iconv( 'ISO-8859-1', 'UTF-8', $dia_semana ) );
+                ?>
+                <div id="<?php echo str_replace('á','a',$dia_semana);?>" class="contenido-dia clearfix">
+                    <h4><?php echo $dia_semana ?></h4>
                     <?php foreach($eventos['eventos'] as $categoria => $evento_dia){ ?>
                     <div>
                         <p><?php echo $categoria; ?></p>
