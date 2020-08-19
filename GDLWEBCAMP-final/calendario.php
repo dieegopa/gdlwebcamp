@@ -54,7 +54,7 @@ foreach ( $calendario as $dia => $lista_eventos ) {
     <h3>
     <i class="fa fa-calendar"></i>
     <?php
-    setlocale( LC_ALL, 'spanish' );
+    setlocale( LC_ALL, 'es_ES.utf8' );
     $dateutf = strftime( '%A, %d de %B del %Y', strtotime( $dia ) );
     $dateutf = ucfirst( iconv( 'ISO-8859-1', 'UTF-8', $dateutf ) );
     echo $dateutf;
