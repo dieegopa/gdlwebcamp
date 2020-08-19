@@ -1,0 +1,63 @@
+.user-panel{
+    height: 6rem;
+}
+
+.user-panel .info {
+    position: relative;
+    left: auto;
+}
+
+.skin-blue .sidebar-menu li.header {
+    color: white;
+}
+
+
+.login-page .main-footer {
+    display: none;
+}
+
+.lista-precios {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.lista-precios li .numero {
+    font-size: 30px;
+}
+
+.contenido-dia label{
+    font-weight: normal;
+}
+
+.contenido-dia time {
+    color: #fe4918;
+    font-weight: bold;
+}
+
+.tabla-precio h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fe4918;
+}
+
+.tabla-precio ul{
+    list-style: none;
+}
+
+.contenido-dia {
+    display: none;
+    border-bottom: 2px solid #fe4819;
+}
+
+.contenido-dia:last-of-type{
+    border-bottom: none;
+}
+
+.nombre_dia{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fe4918;
+}
