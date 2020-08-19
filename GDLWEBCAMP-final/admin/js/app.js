@@ -46,6 +46,22 @@ $(document).ready(function () {
         autoclose: true,
         changeYear: true,
     });
+  
+    $("#fecha_evento").datepicker("option", {
+        beforeShowDay: function (date)
+        {
+          return [date.getDay() == 1, ''];
+        }
+    });
+
+    // prevent changing weeks and months
+    var weekOptions = { "changeMonth": false, "changeYear": false, "stepMonths": 0, beforeShowDay: function (date) {
+        return [date.getDay() == 1, ''];
+    } 
+    };
+    $(function () {
+        $("#fecha_evento").datepicker("option", weekOptions);
+    });
 
     //Initialize Select2 Elements
     $('.seleccionar').select2();
