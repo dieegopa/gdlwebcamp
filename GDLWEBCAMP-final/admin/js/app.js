@@ -45,10 +45,8 @@ $(document).ready(function () {
     $('#fecha_evento').datepicker({
         autoclose: true,
         changeYear: true,
-        beforeShowDay: function(date){ 
-            var day = date.getDay(); 
-            return [day == 1 || day == 4,""];
-        }
+        minDate: 0,
+        beforeShowDay: function(date){ return [(date.getDay() == 2 || date.getDay() == 3 || date.getDay() == 4 || date.getDay() == 5 || date.getDay() == 6 || date.getDay() == 0), ""]; }
     });
 
     //Initialize Select2 Elements
