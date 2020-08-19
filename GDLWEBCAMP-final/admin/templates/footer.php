@@ -52,6 +52,8 @@
 
 <script src="js/morris.min.js"></script>
 
+<script src="js/jquery-ui.min.js"></script>
+
 <script src="js/app.js"></script>
 
 </body>
