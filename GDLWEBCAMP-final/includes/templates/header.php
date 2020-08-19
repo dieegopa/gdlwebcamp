@@ -14,6 +14,7 @@
 	}
 	// Si el archivo no existe, o el tiempo de cacheo ya se venció genera uno nuevo
 	ob_start();
+  locale_set_default('es-ES');
 ?>
 <html>
 
