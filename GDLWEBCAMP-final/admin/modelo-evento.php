@@ -13,6 +13,8 @@ $id_registro = (int) $_POST['id_registro'];
 
 
 if($_POST['registro']=='crear'){
+  
+    die(json_encode($_POST));
     
     try{
         $stmt = $conexion->prepare("INSERT INTO eventos (nombre_evento, fecha_evento, hora_evento, id_cat_evento, id_invitado_evento ) VALUES (?,?,?,?,?)");
