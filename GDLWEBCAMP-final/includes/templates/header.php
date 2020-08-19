@@ -36,6 +36,7 @@
 
     <?php
         setlocale(LC_ALL, 'es_ES');
+        date_default_timezone_set('America/Bogota');
         $archivo = basename($_SERVER['PHP_SELF']);
         $pagina = str_replace(".php", "", $archivo);
         if($pagina == 'invitados' || $pagina == 'index'){
