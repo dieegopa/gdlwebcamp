@@ -83,7 +83,7 @@ include_once 'templates/navegacion.php';
                                         
                                         foreach($articulos as $key => $value){
                                             if(array_key_exists('cantidad', $value)){
-                                            if($value['cantidad'] != '0'){
+                                            if($value['cantidad'] != 0){
                                                  echo $value['cantidad'] . ' ' . $arreglo_articulos[$key] .  "<br>";   
                                                 }
                                             } else {
