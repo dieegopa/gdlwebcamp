@@ -6,7 +6,7 @@
     // Definir archivo para cachear (puede ser .php también)
 	$archivoCache = 'cache/'.$pagina.'.php';
 	// Cuanto tiempo deberá estar este archivo almacenado
-	$tiempo = 36000;
+	$tiempo = 60;
 	// Checar que el archivo exista, el tiempo sea el adecuado y muestralo
 	if (file_exists($archivoCache) && time() - $tiempo < filemtime($archivoCache)) {
    	include($archivoCache);
@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="css/normalize.css?v=<?php echo time(); ?>">
 
     <?php
+        setlocale(LC_ALL, 'es_ES');
         $archivo = basename($_SERVER['PHP_SELF']);
         $pagina = str_replace(".php", "", $archivo);
         if($pagina == 'invitados' || $pagina == 'index'){
