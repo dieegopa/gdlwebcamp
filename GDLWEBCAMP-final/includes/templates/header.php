@@ -14,7 +14,6 @@
 	}
 	// Si el archivo no existe, o el tiempo de cacheo ya se venció genera uno nuevo
 	ob_start();
-  locale_set_default('es-ES');
 ?>
 <html>
 
@@ -35,7 +34,8 @@
 
     <link rel="stylesheet" href="css/normalize.css?v=<?php echo time(); ?>">
 
-    <?php 
+    <?php
+        setlocale(LC_ALL, 'es_ES');
         $archivo = basename($_SERVER['PHP_SELF']);
         $pagina = str_replace(".php", "", $archivo);
         if($pagina == 'invitados' || $pagina == 'index'){
