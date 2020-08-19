@@ -45,8 +45,11 @@ $(document).ready(function () {
     $('#fecha_evento').datepicker({
         autoclose: true,
         changeYear: true,
-        minDate: 0,
-        beforeShowDay: function(date){ return [(date.getDay() == 2 || date.getDay() == 3 || date.getDay() == 4 || date.getDay() == 5 || date.getDay() == 6 || date.getDay() == 0), ""]; }
+        changeMonth: true,
+        beforeShowDay: function (date) {
+            var day = date.getDay();
+            return [day == 5 || day == 6 || day == 0, ""];
+        }
     });
 
     //Initialize Select2 Elements
