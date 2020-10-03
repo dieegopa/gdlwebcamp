@@ -4,19 +4,7 @@ $usuario = $_POST['usuario'];
 $password = $_POST['password'];
 
 if($_POST['registro']=='login'){
-    
-    
-    try {
-      
-      $password = 'admin';
-      $opciones = array(
-        'cost' => 12
-    );
-    
-    $password_hashed = password_hash($password, PASSWORD_BCRYPT, $opciones);
-      $stmt=$conexion->prepare("INSERT INTO admins VALUES(?, ?)");
-      $stmt->bind_param("ss", $usuario, $password_hased);
-      $stmt->execute();
+  
         $stmt = $conexion->prepare("SELECT * FROM admins WHERE usuario = ?");
         $stmt->bind_param("s", $usuario);
         $stmt->execute();
