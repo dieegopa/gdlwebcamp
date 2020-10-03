@@ -5,6 +5,8 @@ $password = $_POST['password'];
 
 if($_POST['registro']=='login'){
   
+        try{
+  
         $stmt = $conexion->prepare("SELECT * FROM admins WHERE usuario = ?");
         $stmt->bind_param("s", $usuario);
         $stmt->execute();
