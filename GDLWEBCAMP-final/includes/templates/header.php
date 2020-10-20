@@ -90,7 +90,7 @@
         <div class="contenedor clearfix">
             <div class="barra-menu">
                 <div class="logo">
-                    <a href="index.php"><img src="img/logo.svg" alt="imagen logo"></a>
+                    <a href="index"><img src="img/logo.svg" alt="imagen logo"></a>
                 </div>
                 <div class="menu-movil">
                     <span></span>
@@ -99,10 +99,10 @@
                 </div>
 
                 <nav class="navegacion-principal clearfix">
-                    <a href="conferencia.php">Conferencia</a>
-                    <a href="calendario.php">Calendario</a>
-                    <a href="invitados.php">Invitados</a>
-                    <a href="registro.php">Reservaciones</a>
+                    <a href="conferencia">Conferencia</a>
+                    <a href="calendario">Calendario</a>
+                    <a href="invitados">Invitados</a>
+                    <a href="registro">Reservaciones</a>
                 </nav>
             </div>
 
