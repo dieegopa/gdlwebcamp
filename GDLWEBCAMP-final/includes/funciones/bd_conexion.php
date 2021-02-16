@@ -1,13 +1,14 @@
-<?php 
-    define( 'DB_USUARIO', '9Wn2HYok0g' );
-    define( 'DB_PASSWORD', 'OAbm3kEWiu' );
-    define( 'DB_HOST', 'remotemysql.com' );
-    define( 'DB_NOMBRE', '9Wn2HYok0g' );
+<?php
+  $host_name = 'sql11.freemysqlhosting.net';
+  $database = 'sql11393353';
+  $user_name = 'sql11393353';
+  $password = 'cV1lAxe2A3';
 
-    $conexion = new mysqli( DB_HOST, DB_USUARIO, DB_PASSWORD, DB_NOMBRE );
+  $conexion = new mysqli($host_name, $user_name, $password, $database);
 
-    if($conexion->connect_error) {
-        echo $error -> $conexion->connect_error;
-    }
+$conexion->set_charset( 'utf8' );
 
+  if ($conexion->connect_error) {
+    die('<p>Error al conectar con servidor MySQL: '. $conexion->connect_error .'</p>');
+  }
 ?>
